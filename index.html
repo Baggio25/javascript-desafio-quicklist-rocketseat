@@ -16,19 +16,55 @@
 
   <title>QuickList</title>
 </head>
+
 <body>
+  <main class="container">
+    <section id="app">
+      <p>Voltar </p>
 
-  <section id="app">
-    <p><- Voltar </p>
-    
-    <h1 class="title">Compras da semana</h1>
+      <h1 class="title">Compras da semana</h1>
 
-    <form>
-      <div class="add-item-container">
-        <input type="text" placeholder="Adicione um novo item">
-        <button>Adicionar Item</button>
-      </div>
-    </form>
-  </section>
+      <form>
+        <div class="add-item-container">
+          <input type="text" placeholder="Adicione um novo item">
+          <button>Adicionar Item</button>
+        </div>
+
+        <ul class="list-container">
+          <li class="item-container">
+            <div class="form-group-container">
+              <input type="checkbox" name="item" id="item">
+              <label for="item">Pão de forma</label>
+            </div>
+            <img src="assets/delete.svg">
+          </li>
+          <li class="item-container">
+            <div class="form-group-container">
+              <input type="checkbox" name="item" id="item">
+              <label for="item">Café preto</label>
+            </div>
+            <img src="assets/delete.svg">
+          </li>
+          <li class="item-container">
+            <div class="form-group-container">
+              <input type="checkbox" name="item" id="item">
+              <label for="item">Suco de laranja</label>
+            </div>
+            <img src="assets/delete.svg">
+          </li>
+          <li class="item-container">
+            <div class="form-group-container">
+              <input type="checkbox" name="item" id="item">
+              <label for="item">Bolacha</label>
+            </div>
+            <img src="assets/delete.svg">
+          </li>
+        </ul>
+      </form>
+
+
+    </section>
+  </main>
 </body>
+
 </html>

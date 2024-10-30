@@ -92,4 +92,96 @@ body {
       background-color: var(--color-brand-hover);
     }
   }
+
+  & .list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+
+    & .item-container {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      background-color: var(--background-secondary);
+
+      & .form-group-container {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        & input[type="checkbox"] {
+          appearance: none;
+          position: relative;
+          width: 1rem;
+          height: 1rem;
+          background-color: var(--background-secondary);
+          border: 1px solid var(--border-primary);
+          border-radius: 6px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 7px;
+            height: 7px;
+            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+            transform: translate(-50%, -50%) scale(0);
+            transform-origin: center;
+            transition: 0.125s transform ease-in-out;
+            box-shadow: inset 1rem 1rem #fff;
+          }
+
+          &:checked {
+            background-color: var(--color-brand);
+            border-color: var(--color-brand);
+
+            &::before {
+              transform: translate(-50%, -50%) scale(1);
+            }
+          }
+        }
+
+        & label {
+          font: var(--paragraph);
+          color: var(--content-secondary);
+        }
+
+      }
+
+      & img {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (width >=48em) {
+
+  .container {
+    margin: 0 auto;
+    max-width: 39.1875rem;
+  }
+
+  #app {
+    .add-item-container {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+
+      & input {
+        width: 100%;
+      }
+
+      & button {
+        width: 15rem;
+      }
+
+    }
+  }
 }
